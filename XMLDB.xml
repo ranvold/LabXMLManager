@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StudentsDataBase>
+	<student ID ="1"
+			 FULLNAME ="Oleg Kravchuk Serhiyovych"
+			 GROUP ="K24"
+			 AREAS_OF_THESIS ="Computer Science"
+			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
+			 THESIS_TOPIC ="Investigation of the effectiveness of the use of multiprocessor systems."
+			 SCHEDULE ="Monday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Multiprocessing"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+	<student ID ="2"
+			 FULLNAME ="Goncharenko Eugene Vasylovych"
+			 GROUP ="K24"
+			 AREAS_OF_THESIS ="Software Engineering"
+			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
+			 THESIS_TOPIC ="Streaming programming languages."
+			 SCHEDULE ="Tuesday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Stream_processing"
+			 STAGE ="Started">
+	</student>
+	<student ID ="3"
+			 FULLNAME ="Savchuk Maxim Viktorovich"
+			 GROUP ="K27"
+			 AREAS_OF_THESIS ="Computer Science"
+			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
+			 THESIS_TOPIC ="Application of information technologies to mathematical modeling."
+			 SCHEDULE ="Wednesday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Computer_simulation"
+			 STAGE ="Did not start">
+	</student>
+	<student ID ="4"
+			 FULLNAME ="Yurchenko Anton Andriyovych"
+			 GROUP ="K26"
+			 AREAS_OF_THESIS ="Computer Engineering"
+			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
+			 THESIS_TOPIC ="Prospects for the development of microprocessors."
+			 SCHEDULE ="Thursday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Microprocessor"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+	<student ID ="5"
+			 FULLNAME ="Vasilchenko Maxim Aleksandrovich"
+			 GROUP ="K25"
+			 AREAS_OF_THESIS ="Cybersecurity"
+			 PROFESSOR ="Shemayev Volodymyr Mykolayovych"
+			 THESIS_TOPIC ="Application of information technologies to mathematical modeling."
+			 SCHEDULE ="Friday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Computer_simulation"
+			 STAGE ="Did not start">
+	</student>
+	<student ID ="6"
+			 FULLNAME ="Klymenko Maksym Vitaliyovych"
+			 GROUP ="K27"
+			 AREAS_OF_THESIS ="Software Engineering"
+			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
+			 THESIS_TOPIC ="Principles of creating a parallel programming system."
+			 SCHEDULE ="Wednesday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Parallel_computing"
+			 STAGE ="Started">
+	</student>
+	<student ID ="7"
+			 FULLNAME ="Yurchenko Anton Andriyovych"
+			 GROUP ="K26"
+			 AREAS_OF_THESIS ="Computer Engineering"
+			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
+			 THESIS_TOPIC ="Prospects for the development of microprocessors."
+			 SCHEDULE ="Friday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Microprocessor"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+
+</StudentsDataBase>
