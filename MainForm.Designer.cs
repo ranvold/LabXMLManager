@@ -30,13 +30,13 @@ namespace LabXMLManager
         private void InitializeComponent()
         {
             this.CheckBoxGroup = new System.Windows.Forms.CheckBox();
-            this.CheckBoxAreasOfThesis = new System.Windows.Forms.CheckBox();
+            this.CheckBoxAreaOfThesis = new System.Windows.Forms.CheckBox();
             this.CheckBoxProfessor = new System.Windows.Forms.CheckBox();
             this.CheckBoxSchedule = new System.Windows.Forms.CheckBox();
             this.CheckBoxStage = new System.Windows.Forms.CheckBox();
             this.ComboBoxGroup = new System.Windows.Forms.ComboBox();
-            this.ComboBoxAreasOfThesis = new System.Windows.Forms.ComboBox();
-            this.ComboBoxProfesor = new System.Windows.Forms.ComboBox();
+            this.ComboBoxAreaOfThesis = new System.Windows.Forms.ComboBox();
+            this.ComboBoxProfessor = new System.Windows.Forms.ComboBox();
             this.ComboBoxSchedule = new System.Windows.Forms.ComboBox();
             this.ComboBoxStage = new System.Windows.Forms.ComboBox();
             this.RadioButtonSax = new System.Windows.Forms.RadioButton();
@@ -59,16 +59,16 @@ namespace LabXMLManager
             this.CheckBoxGroup.Text = "Group";
             this.CheckBoxGroup.UseVisualStyleBackColor = true;
             // 
-            // CheckBoxAreasOfThesis
+            // CheckBoxAreaOfThesis
             // 
-            this.CheckBoxAreasOfThesis.AutoSize = true;
-            this.CheckBoxAreasOfThesis.Location = new System.Drawing.Point(46, 156);
-            this.CheckBoxAreasOfThesis.Margin = new System.Windows.Forms.Padding(4);
-            this.CheckBoxAreasOfThesis.Name = "CheckBoxAreasOfThesis";
-            this.CheckBoxAreasOfThesis.Size = new System.Drawing.Size(117, 23);
-            this.CheckBoxAreasOfThesis.TabIndex = 1;
-            this.CheckBoxAreasOfThesis.Text = "Areas of thesis";
-            this.CheckBoxAreasOfThesis.UseVisualStyleBackColor = true;
+            this.CheckBoxAreaOfThesis.AutoSize = true;
+            this.CheckBoxAreaOfThesis.Location = new System.Drawing.Point(46, 156);
+            this.CheckBoxAreaOfThesis.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckBoxAreaOfThesis.Name = "CheckBoxAreaOfThesis";
+            this.CheckBoxAreaOfThesis.Size = new System.Drawing.Size(111, 23);
+            this.CheckBoxAreaOfThesis.TabIndex = 1;
+            this.CheckBoxAreaOfThesis.Text = "Area of thesis";
+            this.CheckBoxAreaOfThesis.UseVisualStyleBackColor = true;
             // 
             // CheckBoxProfessor
             // 
@@ -113,25 +113,25 @@ namespace LabXMLManager
             this.ComboBoxGroup.Size = new System.Drawing.Size(265, 27);
             this.ComboBoxGroup.TabIndex = 5;
             // 
-            // ComboBoxAreasOfThesis
+            // ComboBoxAreaOfThesis
             // 
-            this.ComboBoxAreasOfThesis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxAreasOfThesis.FormattingEnabled = true;
-            this.ComboBoxAreasOfThesis.Location = new System.Drawing.Point(180, 154);
-            this.ComboBoxAreasOfThesis.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboBoxAreasOfThesis.Name = "ComboBoxAreasOfThesis";
-            this.ComboBoxAreasOfThesis.Size = new System.Drawing.Size(265, 27);
-            this.ComboBoxAreasOfThesis.TabIndex = 6;
+            this.ComboBoxAreaOfThesis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxAreaOfThesis.FormattingEnabled = true;
+            this.ComboBoxAreaOfThesis.Location = new System.Drawing.Point(180, 154);
+            this.ComboBoxAreaOfThesis.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboBoxAreaOfThesis.Name = "ComboBoxAreaOfThesis";
+            this.ComboBoxAreaOfThesis.Size = new System.Drawing.Size(265, 27);
+            this.ComboBoxAreaOfThesis.TabIndex = 6;
             // 
-            // ComboBoxProfesor
+            // ComboBoxProfessor
             // 
-            this.ComboBoxProfesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxProfesor.FormattingEnabled = true;
-            this.ComboBoxProfesor.Location = new System.Drawing.Point(180, 223);
-            this.ComboBoxProfesor.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboBoxProfesor.Name = "ComboBoxProfesor";
-            this.ComboBoxProfesor.Size = new System.Drawing.Size(265, 27);
-            this.ComboBoxProfesor.TabIndex = 7;
+            this.ComboBoxProfessor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxProfessor.FormattingEnabled = true;
+            this.ComboBoxProfessor.Location = new System.Drawing.Point(180, 223);
+            this.ComboBoxProfessor.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboBoxProfessor.Name = "ComboBoxProfessor";
+            this.ComboBoxProfessor.Size = new System.Drawing.Size(265, 27);
+            this.ComboBoxProfessor.TabIndex = 7;
             // 
             // ComboBoxSchedule
             // 
@@ -210,6 +210,7 @@ namespace LabXMLManager
             this.ButtonSearch.TabIndex = 14;
             this.ButtonSearch.Text = "Search";
             this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // ButtonTransformToHTML
             // 
@@ -219,6 +220,7 @@ namespace LabXMLManager
             this.ButtonTransformToHTML.TabIndex = 15;
             this.ButtonTransformToHTML.Text = "Transform to HTML";
             this.ButtonTransformToHTML.UseVisualStyleBackColor = true;
+            this.ButtonTransformToHTML.Click += new System.EventHandler(this.ButtonTransformToHTML_Click);
             // 
             // ButtonClear
             // 
@@ -228,6 +230,7 @@ namespace LabXMLManager
             this.ButtonClear.TabIndex = 16;
             this.ButtonClear.Text = "Clear";
             this.ButtonClear.UseVisualStyleBackColor = true;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // MainForm
             // 
@@ -243,13 +246,13 @@ namespace LabXMLManager
             this.Controls.Add(this.RadioButtonSax);
             this.Controls.Add(this.ComboBoxStage);
             this.Controls.Add(this.ComboBoxSchedule);
-            this.Controls.Add(this.ComboBoxProfesor);
-            this.Controls.Add(this.ComboBoxAreasOfThesis);
+            this.Controls.Add(this.ComboBoxProfessor);
+            this.Controls.Add(this.ComboBoxAreaOfThesis);
             this.Controls.Add(this.ComboBoxGroup);
             this.Controls.Add(this.CheckBoxStage);
             this.Controls.Add(this.CheckBoxSchedule);
             this.Controls.Add(this.CheckBoxProfessor);
-            this.Controls.Add(this.CheckBoxAreasOfThesis);
+            this.Controls.Add(this.CheckBoxAreaOfThesis);
             this.Controls.Add(this.CheckBoxGroup);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -263,13 +266,13 @@ namespace LabXMLManager
         #endregion
 
         private System.Windows.Forms.CheckBox CheckBoxGroup;
-        private System.Windows.Forms.CheckBox CheckBoxAreasOfThesis;
+        private System.Windows.Forms.CheckBox CheckBoxAreaOfThesis;
         private System.Windows.Forms.CheckBox CheckBoxProfessor;
         private System.Windows.Forms.CheckBox CheckBoxSchedule;
         private System.Windows.Forms.CheckBox CheckBoxStage;
         private System.Windows.Forms.ComboBox ComboBoxGroup;
-        private System.Windows.Forms.ComboBox ComboBoxAreasOfThesis;
-        private System.Windows.Forms.ComboBox ComboBoxProfesor;
+        private System.Windows.Forms.ComboBox ComboBoxAreaOfThesis;
+        private System.Windows.Forms.ComboBox ComboBoxProfessor;
         private System.Windows.Forms.ComboBox ComboBoxSchedule;
         private System.Windows.Forms.ComboBox ComboBoxStage;
         private System.Windows.Forms.RadioButton RadioButtonSax;
