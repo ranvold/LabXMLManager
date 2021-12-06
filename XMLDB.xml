@@ -2,7 +2,7 @@
 <StudentsDataBase>
 	<student ID ="1"
 			 FULLNAME ="Oleg Kravchuk Serhiyovych"
-			 GROUP ="K24"
+			 GROUP ="K44"
 			 AREAS_OF_THESIS ="Computer Science"
 			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
 			 THESIS_TOPIC ="Investigation of the effectiveness of the use of multiprocessor systems."
@@ -12,7 +12,7 @@
 	</student>
 	<student ID ="2"
 			 FULLNAME ="Goncharenko Eugene Vasylovych"
-			 GROUP ="K24"
+			 GROUP ="K44"
 			 AREAS_OF_THESIS ="Software Engineering"
 			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
 			 THESIS_TOPIC ="Streaming programming languages."
@@ -22,7 +22,7 @@
 	</student>
 	<student ID ="3"
 			 FULLNAME ="Savchuk Maxim Viktorovich"
-			 GROUP ="K27"
+			 GROUP ="K47"
 			 AREAS_OF_THESIS ="Computer Science"
 			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
 			 THESIS_TOPIC ="Application of information technologies to mathematical modeling."
@@ -32,7 +32,7 @@
 	</student>
 	<student ID ="4"
 			 FULLNAME ="Yurchenko Anton Andriyovych"
-			 GROUP ="K26"
+			 GROUP ="K46"
 			 AREAS_OF_THESIS ="Computer Engineering"
 			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
 			 THESIS_TOPIC ="Prospects for the development of microprocessors."
@@ -42,17 +42,17 @@
 	</student>
 	<student ID ="5"
 			 FULLNAME ="Vasilchenko Maxim Aleksandrovich"
-			 GROUP ="K25"
+			 GROUP ="K45"
 			 AREAS_OF_THESIS ="Cybersecurity"
 			 PROFESSOR ="Shemayev Volodymyr Mykolayovych"
-			 THESIS_TOPIC ="Application of information technologies to mathematical modeling."
+			 THESIS_TOPIC ="Development of information security policy in the bank."
 			 SCHEDULE ="Friday"
-			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Computer_simulation"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Information_protection_policy"
 			 STAGE ="Did not start">
 	</student>
 	<student ID ="6"
 			 FULLNAME ="Klymenko Maksym Vitaliyovych"
-			 GROUP ="K27"
+			 GROUP ="K47"
 			 AREAS_OF_THESIS ="Software Engineering"
 			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
 			 THESIS_TOPIC ="Principles of creating a parallel programming system."
@@ -61,14 +61,103 @@
 			 STAGE ="Started">
 	</student>
 	<student ID ="7"
+			 FULLNAME ="Koshov Bohdan Olehovych"
+			 GROUP ="K47"
+			 AREAS_OF_THESIS ="Computer Engineering"
+			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
+			 THESIS_TOPIC ="Organization and functioning of virtual computer memory."
+			 SCHEDULE ="Friday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Virtual_memory"
+			 STAGE ="Started">
+	</student>
+	<student ID ="8"
+			 FULLNAME ="Marchenko Mark Konstantinovich"
+			 GROUP ="K44"
+			 AREAS_OF_THESIS ="Cybersecurity"
+			 PROFESSOR ="Shemayev Volodymyr Mykolayovych"
+			 THESIS_TOPIC ="A study of the cybersecurity of the application of cryptographic means of protection in the company."
+			 SCHEDULE ="Monday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Cryptography"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+	<student ID ="9"
+			 FULLNAME ="Obozny Maksym Vasyliovych"
+			 GROUP ="K46"
+			 AREAS_OF_THESIS ="Computer Science"
+			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
+			 THESIS_TOPIC ="Study and implementation in a software product of solving systems of nonlinear equations using the Jacobi method."
+			 SCHEDULE ="Tuesday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Jacobi_method"
+			 STAGE ="Started">
+	</student>
+	<student ID ="10"
+			 FULLNAME ="Perekopsky Mykhailo Andriy"
+			 GROUP ="K45"
+			 AREAS_OF_THESIS ="Software Engineering"
+			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
+			 THESIS_TOPIC ="Development of a client-server analytical distributed information system for working time management."
+			 SCHEDULE ="Monday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Client–server_model"
+			 STAGE ="Did not start">
+	</student>
+	<student ID ="11"
+			 FULLNAME ="Syzonenko Yegor Yuriyovych"
+			 GROUP ="K45"
+			 AREAS_OF_THESIS ="Computer Science"
+			 PROFESSOR ="Gritsenko Dmitry Serhiyovych"
+			 THESIS_TOPIC ="Features of multilingual programming."
+			 SCHEDULE ="Thursday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Polyglot_(computing)"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+	<student ID ="12"
 			 FULLNAME ="Yurchenko Anton Andriyovych"
-			 GROUP ="K26"
+			 GROUP ="K44"
 			 AREAS_OF_THESIS ="Computer Engineering"
 			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
 			 THESIS_TOPIC ="Prospects for the development of microprocessors."
-			 SCHEDULE ="Friday"
+			 SCHEDULE ="Wednesday"
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Microprocessor"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-
+	<student ID ="13"
+			 FULLNAME ="Stetsenko Ilya Valerievich"
+			 GROUP ="K46"
+			 AREAS_OF_THESIS ="Cybersecurity"
+			 PROFESSOR ="Shemayev Volodymyr Mykolayovych"
+			 THESIS_TOPIC ="Security of information systems based on logical modeling."
+			 SCHEDULE ="Friday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Logical_security"
+			 STAGE ="Wednesday">
+	</student>
+	<student ID ="14"
+			 FULLNAME ="Aleksenko Dmitry Vyacheslavovich"
+			 GROUP ="K46"
+			 AREAS_OF_THESIS ="Software Engineering"
+			 PROFESSOR ="Kornienko Bogdan Yaroslavovich"
+			 THESIS_TOPIC ="Development of a blockchain network integration system for fast transactions."
+			 SCHEDULE ="Friday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Blockchain"
+			 STAGE ="Did not start">
+	</student>
+	<student ID ="15"
+			 FULLNAME ="Nesterenko Ivan Yuriyovych"
+			 GROUP ="K45"
+			 AREAS_OF_THESIS ="Computer Engineering"
+			 PROFESSOR ="Pisarenko Andrii Volodymyrovych"
+			 THESIS_TOPIC ="Robot control system programming."
+			 SCHEDULE ="Monday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Robot_software"
+			 STAGE ="Preparation for thesis defense">
+	</student>
+	<student ID ="16"
+			 FULLNAME ="Rudenko Vladislav Vadimovich"
+			 GROUP ="K47"
+			 AREAS_OF_THESIS ="Cybersecurity"
+			 PROFESSOR ="Shemayev Volodymyr Mykolayovych"
+			 THESIS_TOPIC ="Development of a risk model for an information security management system under conditions of uncertainty."
+			 SCHEDULE ="Thursday"
+			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Model_risk"
+			 STAGE ="Started">
+	</student>
 </StudentsDataBase>
