@@ -14,36 +14,14 @@ namespace LabXMLManager
 {
     public partial class MainForm : Form
     {
-        private List<Student> gottenStudent = new();
-        private string path = "XMLDB.xml";
-
         public MainForm()
         {
             InitializeComponent();
-            GetAllStudents();
+            Manager.GetAllFilters(ComboBoxGroup, ComboBoxAreaOfThesis, 
+                ComboBoxProfessor, ComboBoxSchedule, ComboBoxStage);
         }
 
-        private void ButtonSearch_Click(object sender, EventArgs e)
-        {
-            RichTextBoxDisplay.Clear();
-            Student student = CurrentStudent();
-            if (RadioButtonLinq.Checked)
-            {
-                IStrategy CurrentStrategy = new Linq(path);
-                gottenStudent = CurrentStrategy.Algorithm(student, path);
-                Result(gottenStudent);
-            }
-            //if (RadioButtonDom.Checked)
-            //{
-            //    IStrategy CurrentStrategy = new Dom(path);
-            //}
-            //if (RadioButtonSax.Checked)
-            //{
-            //    IStrategy CurrentStrategy = new Sax(path);
-            //}
-
-        }
-        private Student CurrentStudent()
+        private Student CurrentStudentFilters()
         {
             string[] info = new string[5];
             if (CheckBoxGroup.Checked)
@@ -70,17 +48,16 @@ namespace LabXMLManager
             return currStudent;
         }
 
-        private void Result(List<Student> gottenStudent)
+        private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            foreach (var item in gottenStudent)
-            {
-                RichTextBoxDisplay.AppendText("Group: " + item.Group + '\n');
-                RichTextBoxDisplay.AppendText("Area of thesis: " + item.AreaOfThesis + '\n');
-                RichTextBoxDisplay.AppendText("Professor: " + item.Professor + '\n');
-                RichTextBoxDisplay.AppendText("Schedule: " + item.Schedule + '\n');
-                RichTextBoxDisplay.AppendText("Stage: " + item.Stage + '\n');
-                RichTextBoxDisplay.AppendText("-------------------------------------------\n");
-            }
+            RichTextBoxDisplay.Clear();
+
+            Student student = CurrentStudentFilters();
+
+            Manager.Search(RadBtnLinq.Checked,
+                RadBtnDom.Checked, RadBtnSax.Checked, student);
+
+            Manager.Result(RichTextBoxDisplay);
         }
 
         private void ButtonClear_Click(object sender, EventArgs e)
@@ -96,45 +73,14 @@ namespace LabXMLManager
             ComboBoxProfessor.Text = null;
             ComboBoxSchedule.Text = null;
             ComboBoxStage.Text = null;
-            RadioButtonSax.Checked = false;
-            RadioButtonLinq.Checked = false;
-            RadioButtonDom.Checked = false;
-        }
-
-        private void GetAllStudents()
-        {
-            var doc = new XmlDocument();
-            doc.Load("XMLDB.xml");
-            XmlNodeList element = doc.SelectNodes("//student");
-            foreach (XmlNode item in element)
-            {
-                string group = item.Attributes.GetNamedItem("GROUP").Value;
-                if (!ComboBoxGroup.Items.Contains(group))
-                    ComboBoxGroup.Items.Add(group);
-                string areaOfThesis = item.Attributes.GetNamedItem("AREA_OF_THESIS").Value;
-                if (!ComboBoxAreaOfThesis.Items.Contains(areaOfThesis))
-                    ComboBoxAreaOfThesis.Items.Add(areaOfThesis);
-                string professor = item.Attributes.GetNamedItem("PROFESSOR").Value;
-                if (!ComboBoxProfessor.Items.Contains(professor))
-                    ComboBoxProfessor.Items.Add(professor);
-                string schedule = item.Attributes.GetNamedItem("SCHEDULE").Value;
-                if (!ComboBoxSchedule.Items.Contains(schedule))
-                    ComboBoxSchedule.Items.Add(schedule);
-                string stage = item.Attributes.GetNamedItem("STAGE").Value;
-                if (!ComboBoxStage.Items.Contains(stage))
-                    ComboBoxStage.Items.Add(stage);
-
-            }
+            RadBtnSax.Checked = false;
+            RadBtnLinq.Checked = false;
+            RadBtnDom.Checked = false;
         }
 
         private void ButtonTransformToHTML_Click(object sender, EventArgs e)
         {
-            XslCompiledTransform xslt = new XslCompiledTransform();
-            xslt.Load("XSL.xsl");
-            string input = @"XMLDB.xml";
-            string output = @"table.html";
-
-            xslt.Transform(input, output);
+            Manager.TransformToHTML();
         }
     }
 }

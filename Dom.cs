@@ -17,13 +17,7 @@ namespace LabXMLManager
         }
         public List<Student> Algorithm(Student std, string path)
         {
-            List<List<Student>> info = new List<List<Student>>();
-
-            try
-            {
-                if
-            }
-            catch { }
+            throw new NotImplementedException();
         }
     }
 }

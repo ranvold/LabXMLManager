@@ -35,6 +35,9 @@ namespace LabXMLManager
                 student.Professor = item.Attribute("PROFESSOR").Value;
                 student.Schedule = item.Attribute("SCHEDULE").Value;
                 student.Stage = item.Attribute("STAGE").Value;
+                student.FullName = item.Attribute("FULLNAME").Value;
+                student.ThesisTopic = item.Attribute("THESIS_TOPIC").Value;
+                student.AuxiliaryMaterials = item.Attribute("AUXILIARY_MATERIALS").Value;
                 info.Add(student);
             }
             return info;

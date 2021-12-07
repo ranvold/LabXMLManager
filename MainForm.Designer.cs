@@ -39,9 +39,9 @@ namespace LabXMLManager
             this.ComboBoxProfessor = new System.Windows.Forms.ComboBox();
             this.ComboBoxSchedule = new System.Windows.Forms.ComboBox();
             this.ComboBoxStage = new System.Windows.Forms.ComboBox();
-            this.RadioButtonSax = new System.Windows.Forms.RadioButton();
-            this.RadioButtonDom = new System.Windows.Forms.RadioButton();
-            this.RadioButtonLinq = new System.Windows.Forms.RadioButton();
+            this.RadBtnSax = new System.Windows.Forms.RadioButton();
+            this.RadBtnDom = new System.Windows.Forms.RadioButton();
+            this.RadBtnLinq = new System.Windows.Forms.RadioButton();
             this.RichTextBoxDisplay = new System.Windows.Forms.RichTextBox();
             this.ButtonSearch = new System.Windows.Forms.Button();
             this.ButtonTransformToHTML = new System.Windows.Forms.Button();
@@ -153,41 +153,41 @@ namespace LabXMLManager
             this.ComboBoxStage.Size = new System.Drawing.Size(265, 27);
             this.ComboBoxStage.TabIndex = 9;
             // 
-            // RadioButtonSax
+            // RadBtnSax
             // 
-            this.RadioButtonSax.AutoSize = true;
-            this.RadioButtonSax.Location = new System.Drawing.Point(46, 501);
-            this.RadioButtonSax.Margin = new System.Windows.Forms.Padding(4);
-            this.RadioButtonSax.Name = "RadioButtonSax";
-            this.RadioButtonSax.Size = new System.Drawing.Size(58, 23);
-            this.RadioButtonSax.TabIndex = 10;
-            this.RadioButtonSax.TabStop = true;
-            this.RadioButtonSax.Text = "SAX";
-            this.RadioButtonSax.UseVisualStyleBackColor = true;
+            this.RadBtnSax.AutoSize = true;
+            this.RadBtnSax.Location = new System.Drawing.Point(46, 501);
+            this.RadBtnSax.Margin = new System.Windows.Forms.Padding(4);
+            this.RadBtnSax.Name = "RadBtnSax";
+            this.RadBtnSax.Size = new System.Drawing.Size(58, 23);
+            this.RadBtnSax.TabIndex = 10;
+            this.RadBtnSax.TabStop = true;
+            this.RadBtnSax.Text = "SAX";
+            this.RadBtnSax.UseVisualStyleBackColor = true;
             // 
-            // RadioButtonDom
+            // RadBtnDom
             // 
-            this.RadioButtonDom.AutoSize = true;
-            this.RadioButtonDom.Location = new System.Drawing.Point(208, 501);
-            this.RadioButtonDom.Margin = new System.Windows.Forms.Padding(4);
-            this.RadioButtonDom.Name = "RadioButtonDom";
-            this.RadioButtonDom.Size = new System.Drawing.Size(64, 23);
-            this.RadioButtonDom.TabIndex = 11;
-            this.RadioButtonDom.TabStop = true;
-            this.RadioButtonDom.Text = "DOM";
-            this.RadioButtonDom.UseVisualStyleBackColor = true;
+            this.RadBtnDom.AutoSize = true;
+            this.RadBtnDom.Location = new System.Drawing.Point(208, 501);
+            this.RadBtnDom.Margin = new System.Windows.Forms.Padding(4);
+            this.RadBtnDom.Name = "RadBtnDom";
+            this.RadBtnDom.Size = new System.Drawing.Size(64, 23);
+            this.RadBtnDom.TabIndex = 11;
+            this.RadBtnDom.TabStop = true;
+            this.RadBtnDom.Text = "DOM";
+            this.RadBtnDom.UseVisualStyleBackColor = true;
             // 
-            // RadioButtonLinq
+            // RadBtnLinq
             // 
-            this.RadioButtonLinq.AutoSize = true;
-            this.RadioButtonLinq.Location = new System.Drawing.Point(380, 501);
-            this.RadioButtonLinq.Margin = new System.Windows.Forms.Padding(4);
-            this.RadioButtonLinq.Name = "RadioButtonLinq";
-            this.RadioButtonLinq.Size = new System.Drawing.Size(65, 23);
-            this.RadioButtonLinq.TabIndex = 12;
-            this.RadioButtonLinq.TabStop = true;
-            this.RadioButtonLinq.Text = "LINQ";
-            this.RadioButtonLinq.UseVisualStyleBackColor = true;
+            this.RadBtnLinq.AutoSize = true;
+            this.RadBtnLinq.Location = new System.Drawing.Point(380, 501);
+            this.RadBtnLinq.Margin = new System.Windows.Forms.Padding(4);
+            this.RadBtnLinq.Name = "RadBtnLinq";
+            this.RadBtnLinq.Size = new System.Drawing.Size(65, 23);
+            this.RadBtnLinq.TabIndex = 12;
+            this.RadBtnLinq.TabStop = true;
+            this.RadBtnLinq.Text = "LINQ";
+            this.RadBtnLinq.UseVisualStyleBackColor = true;
             // 
             // RichTextBoxDisplay
             // 
@@ -241,9 +241,9 @@ namespace LabXMLManager
             this.Controls.Add(this.ButtonTransformToHTML);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.RichTextBoxDisplay);
-            this.Controls.Add(this.RadioButtonLinq);
-            this.Controls.Add(this.RadioButtonDom);
-            this.Controls.Add(this.RadioButtonSax);
+            this.Controls.Add(this.RadBtnLinq);
+            this.Controls.Add(this.RadBtnDom);
+            this.Controls.Add(this.RadBtnSax);
             this.Controls.Add(this.ComboBoxStage);
             this.Controls.Add(this.ComboBoxSchedule);
             this.Controls.Add(this.ComboBoxProfessor);
@@ -275,9 +275,9 @@ namespace LabXMLManager
         private System.Windows.Forms.ComboBox ComboBoxProfessor;
         private System.Windows.Forms.ComboBox ComboBoxSchedule;
         private System.Windows.Forms.ComboBox ComboBoxStage;
-        private System.Windows.Forms.RadioButton RadioButtonSax;
-        private System.Windows.Forms.RadioButton RadioButtonDom;
-        private System.Windows.Forms.RadioButton RadioButtonLinq;
+        private System.Windows.Forms.RadioButton RadBtnSax;
+        private System.Windows.Forms.RadioButton RadBtnDom;
+        private System.Windows.Forms.RadioButton RadBtnLinq;
         private System.Windows.Forms.RichTextBox RichTextBoxDisplay;
         private System.Windows.Forms.Button ButtonSearch;
         private System.Windows.Forms.Button ButtonTransformToHTML;

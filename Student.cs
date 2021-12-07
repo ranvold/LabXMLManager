@@ -13,43 +13,21 @@ namespace LabXMLManager
         public string Professor { get; set; } = null;
         public string Schedule { get; set; } = null;
         public string Stage { get; set; } = null;
-        //public IStrategy Alg { get; set; }
+
+        public string FullName { get; set; } = "";
+        public string ThesisTopic { get; set; } = "";
+        public string AuxiliaryMaterials { get; set; } = "";
 
         public Student() { }
 
-        public Student(string [] data)
+        public Student(string [] info)
         {
-            Group = data[0];
-            AreaOfThesis = data[1];
-            Professor = data[2];
-            Schedule = data[3];
-            Stage = data[4];
+            Group = info[0];
+            AreaOfThesis = info[1];
+            Professor = info[2];
+            Schedule = info[3];
+            Stage = info[4];
         }
 
-        public bool Compare(Student student)
-        {
-            if ((this.Group == student.Group) &&
-               (this.AreaOfThesis == student.AreaOfThesis) &&
-               (this.Professor == student.Professor) &&
-               (this.Schedule == student.Schedule) &&
-               (this.Stage == student.Stage))
-                return true;
-            else
-                return false;
-        }
-
-        //public Student(IStrategy alg)
-        //{
-        //    Group = "";
-        //    AreaOfThesis = "";
-        //    Professor = "";
-        //    Schedule = "";
-        //    Stage = "";
-        //}
-
-        //public List<Student> Algorithm(Student std, string path)
-        //{
-        //    return Alg.Algorithm(std, path);
-        //}
     }
 }
