@@ -20,6 +20,7 @@ namespace LabXMLManager
         public MainForm()
         {
             InitializeComponent();
+            GetAllStudents();
         }
 
         private void ButtonSearch_Click(object sender, EventArgs e)
@@ -29,15 +30,17 @@ namespace LabXMLManager
             if (RadioButtonLinq.Checked)
             {
                 IStrategy CurrentStrategy = new Linq(path);
+                gottenStudent = CurrentStrategy.Algorithm(student, path);
+                Result(gottenStudent);
             }
-            if (RadioButtonDom.Checked)
-            {
-                IStrategy CurrentStrategy = new Dom(path);
-            }
-            if (RadioButtonSax.Checked)
-            {
-                IStrategy CurrentStrategy = new Sax(path);
-            }
+            //if (RadioButtonDom.Checked)
+            //{
+            //    IStrategy CurrentStrategy = new Dom(path);
+            //}
+            //if (RadioButtonSax.Checked)
+            //{
+            //    IStrategy CurrentStrategy = new Sax(path);
+            //}
 
         }
         private Student CurrentStudent()
@@ -76,7 +79,7 @@ namespace LabXMLManager
                 RichTextBoxDisplay.AppendText("Professor: " + item.Professor + '\n');
                 RichTextBoxDisplay.AppendText("Schedule: " + item.Schedule + '\n');
                 RichTextBoxDisplay.AppendText("Stage: " + item.Stage + '\n');
-                RichTextBoxDisplay.AppendText("-------------------------------------------n");
+                RichTextBoxDisplay.AppendText("-------------------------------------------\n");
             }
         }
 
