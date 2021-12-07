@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <StudentsDataBase>
-	<student ID ="1"
+	<student 
 			 FULLNAME ="Oleg Kravchuk Serhiyovych"
 			 GROUP ="K44"
 			 AREA_OF_THESIS ="Computer Science"
@@ -10,7 +10,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Multiprocessing"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="2"
+	<student 
 			 FULLNAME ="Goncharenko Eugene Vasylovych"
 			 GROUP ="K44"
 			 AREA_OF_THESIS ="Software Engineering"
@@ -20,7 +20,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Stream_processing"
 			 STAGE ="Started">
 	</student>
-	<student ID ="3"
+	<student 
 			 FULLNAME ="Savchuk Maxim Viktorovich"
 			 GROUP ="K47"
 			 AREA_OF_THESIS ="Computer Science"
@@ -30,7 +30,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Computer_simulation"
 			 STAGE ="Did not start">
 	</student>
-	<student ID ="4"
+	<student 
 			 FULLNAME ="Yurchenko Anton Andriyovych"
 			 GROUP ="K46"
 			 AREA_OF_THESIS ="Computer Engineering"
@@ -40,7 +40,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Microprocessor"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="5"
+	<student 
 			 FULLNAME ="Vasilchenko Maxim Aleksandrovich"
 			 GROUP ="K45"
 			 AREA_OF_THESIS ="Cybersecurity"
@@ -50,7 +50,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Information_protection_policy"
 			 STAGE ="Did not start">
 	</student>
-	<student ID ="6"
+	<student 
 			 FULLNAME ="Klymenko Maksym Vitaliyovych"
 			 GROUP ="K47"
 			 AREA_OF_THESIS ="Software Engineering"
@@ -60,7 +60,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Parallel_computing"
 			 STAGE ="Started">
 	</student>
-	<student ID ="7"
+	<student 
 			 FULLNAME ="Koshov Bohdan Olehovych"
 			 GROUP ="K47"
 			 AREA_OF_THESIS ="Computer Engineering"
@@ -70,7 +70,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Virtual_memory"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="8"
+	<student 
 			 FULLNAME ="Marchenko Mark Konstantinovich"
 			 GROUP ="K44"
 			 AREA_OF_THESIS ="Cybersecurity"
@@ -80,7 +80,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Cryptography"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="9"
+	<student 
 			 FULLNAME ="Obozny Maksym Vasyliovych"
 			 GROUP ="K46"
 			 AREA_OF_THESIS ="Computer Science"
@@ -90,7 +90,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Jacobi_method"
 			 STAGE ="Started">
 	</student>
-	<student ID ="10"
+	<student 
 			 FULLNAME ="Perekopsky Mykhailo Andriy"
 			 GROUP ="K45"
 			 AREA_OF_THESIS ="Software Engineering"
@@ -100,7 +100,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Client–server_model"
 			 STAGE ="Did not start">
 	</student>
-	<student ID ="11"
+	<student 
 			 FULLNAME ="Syzonenko Yegor Yuriyovych"
 			 GROUP ="K45"
 			 AREA_OF_THESIS ="Computer Science"
@@ -110,7 +110,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Polyglot_(computing)"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="12"
+	<student 
 			 FULLNAME ="Yurchenko Anton Andriyovych"
 			 GROUP ="K44"
 			 AREA_OF_THESIS ="Computer Engineering"
@@ -120,7 +120,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Microprocessor"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="13"
+	<student 
 			 FULLNAME ="Stetsenko Ilya Valerievich"
 			 GROUP ="K46"
 			 AREA_OF_THESIS ="Cybersecurity"
@@ -130,7 +130,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Logical_security"
 			 STAGE ="Started">
 	</student>
-	<student ID ="14"
+	<student 
 			 FULLNAME ="Aleksenko Dmitry Vyacheslavovich"
 			 GROUP ="K46"
 			 AREA_OF_THESIS ="Software Engineering"
@@ -140,7 +140,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Blockchain"
 			 STAGE ="Did not start">
 	</student>
-	<student ID ="15"
+	<student 
 			 FULLNAME ="Nesterenko Ivan Yuriyovych"
 			 GROUP ="K45"
 			 AREA_OF_THESIS ="Computer Engineering"
@@ -150,7 +150,7 @@
 			 AUXILIARY_MATERIALS ="en.wikipedia.org/wiki/Robot_software"
 			 STAGE ="Preparation for thesis defense">
 	</student>
-	<student ID ="16"
+	<student 
 			 FULLNAME ="Rudenko Vladislav Vadimovich"
 			 GROUP ="K47"
 			 AREA_OF_THESIS ="Cybersecurity"

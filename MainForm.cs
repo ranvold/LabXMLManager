@@ -82,5 +82,16 @@ namespace LabXMLManager
         {
             Manager.TransformToHTML();
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to close the program?",
+                "WARNING!",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+            e.Cancel = result == DialogResult.No;
+        }
     }
 }

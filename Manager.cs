@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Xsl;
 
 namespace LabXMLManager
 {
     static class Manager
     { 
-        private const string PathXML = "database.xml";
-        private const string PathXSL = "database.xsl";
+        private const string PathXML = @"database.xml";
+        private const string PathGenXML = @"gen.xml";
+        private const string PathXSL = @"template.xslt";
+        private const string PathHTML = @"table.html";
         private static List<Student> gottenStudents = new();
 
         public static void GetAllFilters(ComboBox Group, ComboBox AreaOfThesis,
@@ -76,11 +79,31 @@ namespace LabXMLManager
         }
         public static void TransformToHTML()
         {
+            XDocument xdoc = new XDocument();
+            XElement StudentsDataBase = new XElement("StudentsDataBase");
+            xdoc.Add(StudentsDataBase);
+            foreach (var item in gottenStudents)
+            {
+                XElement student = new XElement("student");
+                student.Add
+                (
+                    new XAttribute("FULLNAME", item.FullName),
+                    new XAttribute("GROUP", item.Group),
+                    new XAttribute("AREA_OF_THESIS", item.AreaOfThesis),
+                    new XAttribute("PROFESSOR", item.Professor),
+                    new XAttribute("THESIS_TOPIC", item.ThesisTopic),
+                    new XAttribute("SCHEDULE", item.Schedule),
+                    new XAttribute("AUXILIARY_MATERIALS", item.AuxiliaryMaterials),
+                    new XAttribute("STAGE", item.Stage)
+               );
+                StudentsDataBase.Add(student);
+            }
+            xdoc.Save(PathGenXML);
+
             XslCompiledTransform xslt = new XslCompiledTransform();
             xslt.Load(PathXSL);
-            string input = PathXML;
-            string output = @"table.html";
-
+            string input = PathGenXML;
+            string output = PathHTML;
             xslt.Transform(input, output);
         }
     }
