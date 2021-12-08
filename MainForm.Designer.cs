@@ -58,6 +58,7 @@ namespace LabXMLManager
             this.CheckBoxGroup.TabIndex = 0;
             this.CheckBoxGroup.Text = "Group";
             this.CheckBoxGroup.UseVisualStyleBackColor = true;
+            this.CheckBoxGroup.CheckedChanged += new System.EventHandler(this.CheckBoxGroup_CheckedChanged);
             // 
             // CheckBoxAreaOfThesis
             // 
@@ -69,6 +70,7 @@ namespace LabXMLManager
             this.CheckBoxAreaOfThesis.TabIndex = 1;
             this.CheckBoxAreaOfThesis.Text = "Area of thesis";
             this.CheckBoxAreaOfThesis.UseVisualStyleBackColor = true;
+            this.CheckBoxAreaOfThesis.CheckedChanged += new System.EventHandler(this.CheckBoxAreaOfThesis_CheckedChanged);
             // 
             // CheckBoxProfessor
             // 
@@ -80,6 +82,7 @@ namespace LabXMLManager
             this.CheckBoxProfessor.TabIndex = 2;
             this.CheckBoxProfessor.Text = "Professor";
             this.CheckBoxProfessor.UseVisualStyleBackColor = true;
+            this.CheckBoxProfessor.CheckedChanged += new System.EventHandler(this.CheckBoxProfessor_CheckedChanged);
             // 
             // CheckBoxSchedule
             // 
@@ -91,6 +94,7 @@ namespace LabXMLManager
             this.CheckBoxSchedule.TabIndex = 3;
             this.CheckBoxSchedule.Text = "Schedule";
             this.CheckBoxSchedule.UseVisualStyleBackColor = true;
+            this.CheckBoxSchedule.CheckedChanged += new System.EventHandler(this.CheckBoxSchedule_CheckedChanged);
             // 
             // CheckBoxStage
             // 
@@ -102,10 +106,12 @@ namespace LabXMLManager
             this.CheckBoxStage.TabIndex = 4;
             this.CheckBoxStage.Text = "Stage";
             this.CheckBoxStage.UseVisualStyleBackColor = true;
+            this.CheckBoxStage.CheckedChanged += new System.EventHandler(this.CheckBoxStage_CheckedChanged);
             // 
             // ComboBoxGroup
             // 
             this.ComboBoxGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxGroup.Enabled = false;
             this.ComboBoxGroup.FormattingEnabled = true;
             this.ComboBoxGroup.Location = new System.Drawing.Point(180, 86);
             this.ComboBoxGroup.Margin = new System.Windows.Forms.Padding(4);
@@ -116,6 +122,7 @@ namespace LabXMLManager
             // ComboBoxAreaOfThesis
             // 
             this.ComboBoxAreaOfThesis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxAreaOfThesis.Enabled = false;
             this.ComboBoxAreaOfThesis.FormattingEnabled = true;
             this.ComboBoxAreaOfThesis.Location = new System.Drawing.Point(180, 154);
             this.ComboBoxAreaOfThesis.Margin = new System.Windows.Forms.Padding(4);
@@ -126,6 +133,7 @@ namespace LabXMLManager
             // ComboBoxProfessor
             // 
             this.ComboBoxProfessor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxProfessor.Enabled = false;
             this.ComboBoxProfessor.FormattingEnabled = true;
             this.ComboBoxProfessor.Location = new System.Drawing.Point(180, 223);
             this.ComboBoxProfessor.Margin = new System.Windows.Forms.Padding(4);
@@ -136,6 +144,7 @@ namespace LabXMLManager
             // ComboBoxSchedule
             // 
             this.ComboBoxSchedule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxSchedule.Enabled = false;
             this.ComboBoxSchedule.FormattingEnabled = true;
             this.ComboBoxSchedule.Location = new System.Drawing.Point(180, 289);
             this.ComboBoxSchedule.Margin = new System.Windows.Forms.Padding(4);
@@ -146,6 +155,7 @@ namespace LabXMLManager
             // ComboBoxStage
             // 
             this.ComboBoxStage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxStage.Enabled = false;
             this.ComboBoxStage.FormattingEnabled = true;
             this.ComboBoxStage.Location = new System.Drawing.Point(180, 356);
             this.ComboBoxStage.Margin = new System.Windows.Forms.Padding(4);

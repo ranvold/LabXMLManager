@@ -22,7 +22,7 @@ namespace LabXMLManager
             ComboBox Professor, ComboBox Schedule, ComboBox Stage)
         {
             var doc = new XmlDocument();
-            doc.Load("database.xml");
+            doc.Load(PathXML);
             XmlNodeList element = doc.SelectNodes("//student");
             foreach (XmlNode item in element)
             {
@@ -79,9 +79,9 @@ namespace LabXMLManager
         }
         public static void TransformToHTML()
         {
-            XDocument xdoc = new XDocument();
+            XDocument genDoc = new XDocument();
             XElement StudentsDataBase = new XElement("StudentsDataBase");
-            xdoc.Add(StudentsDataBase);
+            genDoc.Add(StudentsDataBase);
             foreach (var item in gottenStudents)
             {
                 XElement student = new XElement("student");
@@ -98,7 +98,7 @@ namespace LabXMLManager
                );
                 StudentsDataBase.Add(student);
             }
-            xdoc.Save(PathGenXML);
+            genDoc.Save(PathGenXML);
 
             XslCompiledTransform xslt = new XslCompiledTransform();
             xslt.Load(PathXSL);

@@ -93,5 +93,35 @@ namespace LabXMLManager
                 MessageBoxDefaultButton.Button2);
             e.Cancel = result == DialogResult.No;
         }
+
+        private void CheckBoxGroup_CheckedChanged(object sender, EventArgs e)
+        {
+            ComboBoxGroup.Enabled = ComboBoxGroup.Enabled != true;
+            ComboBoxGroup.Text = null;
+        }
+
+        private void CheckBoxAreaOfThesis_CheckedChanged(object sender, EventArgs e)
+        {
+            ComboBoxAreaOfThesis.Enabled = ComboBoxAreaOfThesis.Enabled != true;
+            ComboBoxAreaOfThesis.Text = null;
+        }
+
+        private void CheckBoxProfessor_CheckedChanged(object sender, EventArgs e)
+        {
+            ComboBoxProfessor.Enabled = ComboBoxProfessor.Enabled != true;
+            ComboBoxProfessor.Text = null;
+        }
+
+        private void CheckBoxSchedule_CheckedChanged(object sender, EventArgs e)
+        {
+            ComboBoxSchedule.Enabled = ComboBoxSchedule.Enabled != true;
+            ComboBoxSchedule.Text = null;
+        }
+
+        private void CheckBoxStage_CheckedChanged(object sender, EventArgs e)
+        {
+            ComboBoxStage.Enabled = ComboBoxStage.Enabled != true;
+            ComboBoxStage.Text = null;
+        }
     }
 }
