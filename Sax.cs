@@ -21,18 +21,18 @@ namespace LabXMLManager
                 {
                     while (xmlReader.MoveToNextAttribute())
                     {
+                        string fullName = "";
                         string group = "";
                         string areaOfThesis = "";
                         string professor = "";
-                        string schedule = "";
-                        string stage = "";
-                        string fullName = "";
                         string thesisTopic = "";
+                        string schedule = "";
                         string auxiliaryMaterials = "";
+                        string stage = "";                            
 
-                        if (xmlReader.Name.Equals("GROUP") && (xmlReader.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
+                        if (xmlReader.Name.Equals("FULLNAME"))
                         {
-                            group = xmlReader.Value;
+                            fullName = xmlReader.Value;
                             xmlReader.MoveToNextAttribute();
 
                             if (xmlReader.Name.Equals("GROUP") && (xmlReader.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
@@ -40,70 +40,63 @@ namespace LabXMLManager
                                 group = xmlReader.Value;
                                 xmlReader.MoveToNextAttribute();
 
-                                if (xmlReader.Name.Equals("GROUP") && (xmlReader.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
+                                if (xmlReader.Name.Equals("AREA_OF_THESIS") && (xmlReader.Value.Equals(std.AreaOfThesis) || (String.IsNullOrEmpty(std.AreaOfThesis))))
                                 {
-                                    group = xmlReader.Value;
+                                    areaOfThesis = xmlReader.Value;
                                     xmlReader.MoveToNextAttribute();
 
-                                    if (xmlReader.Name.Equals("GROUP") && (xmlReader.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
+                                    if (xmlReader.Name.Equals("PROFESSOR") && (xmlReader.Value.Equals(std.Professor) || (String.IsNullOrEmpty(std.Professor))))
                                     {
-                                        group = xmlReader.Value;
+                                        professor = xmlReader.Value;
                                         xmlReader.MoveToNextAttribute();
 
-                                        if (xmlReader.Name.Equals("GROUP") && (xmlReader.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
+                                        if (xmlReader.Name.Equals("THESIS_TOPIC"))
                                         {
-                                            group = xmlReader.Value;
+                                            thesisTopic = xmlReader.Value;
                                             xmlReader.MoveToNextAttribute();
 
+                                            if (xmlReader.Name.Equals("SCHEDULE") && (xmlReader.Value.Equals(std.Schedule) || (String.IsNullOrEmpty(std.Schedule))))
+                                            {
+                                                schedule = xmlReader.Value;
+                                                xmlReader.MoveToNextAttribute();
+
+                                                if (xmlReader.Name.Equals("AUXILIARY_MATERIALS"))
+                                                {
+                                                    auxiliaryMaterials = xmlReader.Value;
+                                                    xmlReader.MoveToNextAttribute();
+
+                                                    if (xmlReader.Name.Equals("STAGE") && (xmlReader.Value.Equals(std.Stage) || (String.IsNullOrEmpty(std.Stage))))
+                                                    {
+                                                        stage = xmlReader.Value;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
+                            if (group != "" && areaOfThesis != "" && professor != "" && schedule != "" && stage != "")
+                            {
+                                Student filteredStudent = new()
+                                {
+                                    Group = group,
+                                    AreaOfThesis = areaOfThesis,
+                                    Professor = professor,
+                                    Schedule = schedule,
+                                    Stage = stage,
+                                    FullName = fullName,
+                                    ThesisTopic = thesisTopic,
+                                    AuxiliaryMaterials = auxiliaryMaterials
+                                };
+
+                                result.Add(filteredStudent);
+                            }
                         }
                     }
-
                 }
-                
-                //if (group != "" && areaOfThesis != "" && professor != "" && schedule != "" && stage != "")
-                //{
-                //    Student filteredStudent = new Student();
-                //    filteredStudent.Group = group;
-                //    filteredStudent.AreaOfThesis = areaOfThesis;
-                //    filteredStudent.Professor = professor;
-                //    filteredStudent.Schedule = schedule;
-                //    filteredStudent.Stage = stage;
-                //    filteredStudent.FullName = fullName;
-                //    filteredStudent.ThesisTopic = thesisTopic;
-                //    filteredStudent.AuxiliaryMaterials = auxiliaryMaterials;
-                //    result.Add(filteredStudent);
-                //}
             }
+            xmlReader.Close();
             return result;
         }
-    }
-}
-
-foreach (XmlNode currNode in node)
-{
-
-    foreach (XmlAttribute attr in currNode.Attributes)
-    {
-        if (attr.Name.Equals("GROUP") && (attr.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
-            group = attr.Value;
-        if (attr.Name.Equals("AREA_OF_THESIS") && (attr.Value.Equals(std.AreaOfThesis) || (String.IsNullOrEmpty(std.AreaOfThesis))))
-            areaOfThesis = attr.Value;
-        if (attr.Name.Equals("PROFESSOR") && (attr.Value.Equals(std.Professor) || (String.IsNullOrEmpty(std.Professor))))
-            professor = attr.Value;
-        if (attr.Name.Equals("SCHEDULE") && (attr.Value.Equals(std.Schedule) || (String.IsNullOrEmpty(std.Schedule))))
-            schedule = attr.Value;
-        if (attr.Name.Equals("STAGE") && (attr.Value.Equals(std.Stage) || (String.IsNullOrEmpty(std.Stage))))
-            stage = attr.Value;
-
-        if (attr.Name.Equals("FULLNAME"))
-            fullName = attr.Value;
-        if (attr.Name.Equals("THESIS_TOPIC"))
-            thesisTopic = attr.Value;
-        if (attr.Name.Equals("AUXILIARY_MATERIALS"))
-            auxiliaryMaterials = attr.Value;
     }
 }

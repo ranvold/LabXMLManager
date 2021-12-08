@@ -14,7 +14,7 @@ namespace LabXMLManager
     { 
         private const string PathXML = @"database.xml";
         private const string PathGenXML = @"gen.xml";
-        private const string PathXSL = @"template.xslt";
+        private const string PathXSLT = @"template.xslt";
         private const string PathHTML = @"table.html";
         private static List<Student> gottenStudents = new();
 
@@ -48,18 +48,18 @@ namespace LabXMLManager
         {
             if (linq)
             {
-                IStrategy CurrentStrategy = new Linq(PathXML);
+                IStrategy CurrentStrategy = new Linq();
                 gottenStudents = CurrentStrategy.Algorithm(student, PathXML);
             }
             else if (dom)
             {
-                IStrategy CurrentStrategy = new Dom(PathXML);
+                IStrategy CurrentStrategy = new Dom();
                 gottenStudents = CurrentStrategy.Algorithm(student, PathXML);
             }
             else if (sax)
             {
-                //IStrategy CurrentStrategy = new Sax(PathXML);
-                //gottenStudents = CurrentStrategy.Algorithm(student, PathXML);
+                IStrategy CurrentStrategy = new Sax();
+                gottenStudents = CurrentStrategy.Algorithm(student, PathXML);
             }
         }
         public static void Result(RichTextBox Display)
@@ -101,7 +101,7 @@ namespace LabXMLManager
             genDoc.Save(PathGenXML);
 
             XslCompiledTransform xslt = new XslCompiledTransform();
-            xslt.Load(PathXSL);
+            xslt.Load(PathXSLT);
             string input = PathGenXML;
             string output = PathHTML;
             xslt.Transform(input, output);

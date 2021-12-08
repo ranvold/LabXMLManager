@@ -11,13 +11,9 @@ namespace LabXMLManager
     {
         private static XDocument _linqDoc = new XDocument();
 
-        public Linq(string path)
-        {
-            _linqDoc = XDocument.Load(path);
-        }
-
         public List<Student> Algorithm(Student std, string path)
         {
+            _linqDoc = XDocument.Load(path);
             List<Student> result = new List<Student>();
 
             List<XElement> look = (from xml in _linqDoc.Descendants("student")

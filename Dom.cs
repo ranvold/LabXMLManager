@@ -11,12 +11,9 @@ namespace LabXMLManager
     {
         private static XmlDocument domDoc = new XmlDocument();
 
-        public Dom(string path)
-        {
-            domDoc.Load(path);
-        }
         public List<Student> Algorithm(Student std, string path)
         {
+            domDoc.Load(path);
             List<Student> result = new List<Student>();
 
             XmlNode node = domDoc.DocumentElement;
