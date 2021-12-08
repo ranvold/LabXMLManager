@@ -9,12 +9,13 @@ namespace LabXMLManager
 {
     class Dom : IStrategy
     {
-        private static XmlDocument domDoc = new XmlDocument();
+        private static XmlDocument domDoc = new();
 
+        /* Using DOM to filter search */
         public List<Student> Algorithm(Student std, string path)
         {
             domDoc.Load(path);
-            List<Student> result = new List<Student>();
+            var result = new List<Student>();
 
             XmlNode node = domDoc.DocumentElement;
             foreach (XmlNode currNode in node)
@@ -27,6 +28,7 @@ namespace LabXMLManager
                 string fullName = "";
                 string thesisTopic = "";
                 string auxiliaryMaterials = "";
+
                 foreach (XmlAttribute attr in currNode.Attributes)
                 {
                     if (attr.Name.Equals("GROUP") && (attr.Value.Equals(std.Group) || (String.IsNullOrEmpty(std.Group))))
@@ -40,6 +42,7 @@ namespace LabXMLManager
                     if (attr.Name.Equals("STAGE") && (attr.Value.Equals(std.Stage) || (String.IsNullOrEmpty(std.Stage))))
                         stage = attr.Value;
 
+                    /* In any case, add data that is not filtered */
                     if (attr.Name.Equals("FULLNAME"))
                         fullName = attr.Value;
                     if (attr.Name.Equals("THESIS_TOPIC"))
@@ -47,17 +50,21 @@ namespace LabXMLManager
                     if (attr.Name.Equals("AUXILIARY_MATERIALS"))
                         auxiliaryMaterials = attr.Value;
                 }
+
                 if (group != "" && areaOfThesis != "" && professor != "" && schedule != "" && stage != "")
                 {
-                    Student filteredStudent = new Student();
-                    filteredStudent.Group = group;
-                    filteredStudent.AreaOfThesis = areaOfThesis;
-                    filteredStudent.Professor = professor;
-                    filteredStudent.Schedule = schedule;
-                    filteredStudent.Stage = stage;
-                    filteredStudent.FullName = fullName;
-                    filteredStudent.ThesisTopic = thesisTopic;
-                    filteredStudent.AuxiliaryMaterials = auxiliaryMaterials;
+                    var filteredStudent = new Student
+                    {
+                        Group = group,
+                        AreaOfThesis = areaOfThesis,
+                        Professor = professor,
+                        Schedule = schedule,
+                        Stage = stage,
+                        FullName = fullName,
+                        ThesisTopic = thesisTopic,
+                        AuxiliaryMaterials = auxiliaryMaterials
+                    };
+
                     result.Add(filteredStudent);
                 }
             }

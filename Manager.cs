@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -18,6 +14,7 @@ namespace LabXMLManager
         private const string PathHTML = @"table.html";
         private static List<Student> gottenStudents = new();
 
+        /* Get all filters from file */
         public static void GetAllFilters(ComboBox Group, ComboBox AreaOfThesis,
             ComboBox Professor, ComboBox Schedule, ComboBox Stage)
         {
@@ -44,6 +41,8 @@ namespace LabXMLManager
             }
         }
 
+
+        /* The choice of the search algorithm depending on the user's choice. */
         public static void Search(bool linq, bool dom, bool sax, Student student)
         {
             if (linq)
@@ -62,6 +61,8 @@ namespace LabXMLManager
                 gottenStudents = CurrentStrategy.Algorithm(student, PathXML);
             }
         }
+
+        /* We display the already filtered list. */
         public static void Result(RichTextBox Display)
         {
             foreach (var item in gottenStudents)
@@ -77,14 +78,16 @@ namespace LabXMLManager
                 Display.AppendText("--------------------------------------------\n");
             }
         }
+
+        /* Transforming to html based on the filtered list */
         public static void TransformToHTML()
         {
-            XDocument genDoc = new XDocument();
-            XElement StudentsDataBase = new XElement("StudentsDataBase");
+            var genDoc = new XDocument();
+            var StudentsDataBase = new XElement("StudentsDataBase");
             genDoc.Add(StudentsDataBase);
             foreach (var item in gottenStudents)
             {
-                XElement student = new XElement("student");
+                var student = new XElement("student");
                 student.Add
                 (
                     new XAttribute("FULLNAME", item.FullName),
@@ -100,7 +103,7 @@ namespace LabXMLManager
             }
             genDoc.Save(PathGenXML);
 
-            XslCompiledTransform xslt = new XslCompiledTransform();
+            var xslt = new XslCompiledTransform();
             xslt.Load(PathXSLT);
             string input = PathGenXML;
             string output = PathHTML;

@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace LabXMLManager
 {
     class Linq : IStrategy
     {
-        private static XDocument _linqDoc = new XDocument();
+        private static XDocument _linqDoc = new();
 
+        /* Using Linq to filter search */
         public List<Student> Algorithm(Student std, string path)
         {
             _linqDoc = XDocument.Load(path);
-            List<Student> result = new List<Student>();
+            var result = new List<Student>();
 
             List<XElement> look = (from xml in _linqDoc.Descendants("student")
                                     where
@@ -27,16 +25,18 @@ namespace LabXMLManager
 
             foreach (var item in look)
             {
-                Student filteredStudent = new Student();
-                filteredStudent.Group = item.Attribute("GROUP").Value;
-                filteredStudent.AreaOfThesis = item.Attribute("AREA_OF_THESIS").Value;
-                filteredStudent.Professor = item.Attribute("PROFESSOR").Value;
-                filteredStudent.Schedule = item.Attribute("SCHEDULE").Value;
-                filteredStudent.Stage = item.Attribute("STAGE").Value;
+                var filteredStudent = new Student
+                {
+                    Group = item.Attribute("GROUP").Value,
+                    AreaOfThesis = item.Attribute("AREA_OF_THESIS").Value,
+                    Professor = item.Attribute("PROFESSOR").Value,
+                    Schedule = item.Attribute("SCHEDULE").Value,
+                    Stage = item.Attribute("STAGE").Value,
+                    FullName = item.Attribute("FULLNAME").Value,
+                    ThesisTopic = item.Attribute("THESIS_TOPIC").Value,
+                    AuxiliaryMaterials = item.Attribute("AUXILIARY_MATERIALS").Value
+                };
 
-                filteredStudent.FullName = item.Attribute("FULLNAME").Value;
-                filteredStudent.ThesisTopic = item.Attribute("THESIS_TOPIC").Value;
-                filteredStudent.AuxiliaryMaterials = item.Attribute("AUXILIARY_MATERIALS").Value;
                 result.Add(filteredStudent);
             }
             return result;

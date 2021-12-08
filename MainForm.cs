@@ -21,6 +21,7 @@ namespace LabXMLManager
                 ComboBoxProfessor, ComboBoxSchedule, ComboBoxStage);
         }
 
+        /* Find out the current filters */
         private Student CurrentStudentFilters()
         {
             string[] info = new string[5];

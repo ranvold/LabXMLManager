@@ -9,6 +9,7 @@ namespace LabXMLManager
 {
     class Sax : IStrategy
     {
+        /* Using SAX to filter search */
         public List<Student> Algorithm(Student std, string path)
         {
             List<Student> result = new();
@@ -75,22 +76,22 @@ namespace LabXMLManager
                                     }
                                 }
                             }
-                            if (group != "" && areaOfThesis != "" && professor != "" && schedule != "" && stage != "")
+                        }
+                        if (group != "" && areaOfThesis != "" && professor != "" && schedule != "" && stage != "")
+                        {
+                            var filteredStudent = new Student()
                             {
-                                Student filteredStudent = new()
-                                {
-                                    Group = group,
-                                    AreaOfThesis = areaOfThesis,
-                                    Professor = professor,
-                                    Schedule = schedule,
-                                    Stage = stage,
-                                    FullName = fullName,
-                                    ThesisTopic = thesisTopic,
-                                    AuxiliaryMaterials = auxiliaryMaterials
-                                };
+                                Group = group,
+                                AreaOfThesis = areaOfThesis,
+                                Professor = professor,
+                                Schedule = schedule,
+                                Stage = stage,
+                                FullName = fullName,
+                                ThesisTopic = thesisTopic,
+                                AuxiliaryMaterials = auxiliaryMaterials
+                            };
 
-                                result.Add(filteredStudent);
-                            }
+                            result.Add(filteredStudent);
                         }
                     }
                 }
