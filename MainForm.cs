@@ -43,6 +43,16 @@ namespace LabXMLManager
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             RichTextBoxDisplay.Clear();
+            if (!RadBtnDom.Checked && !RadBtnLinq.Checked && !RadBtnSax.Checked)
+            {
+                MessageBox.Show(
+                    "Please select one of the search methods: SAX, DOM, LINQ.",
+                    "INFO",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+                return;
+            }
 
             Student student = CurrentStudentFilters();
 
